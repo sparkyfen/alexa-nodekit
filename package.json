@@ -1,0 +1,28 @@
+{
+  "name": "alexa-nodekit",
+  "version": "1.0.0",
+  "description": "Amazon Echo Alexa's App Kit NodeJS Implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brutalhonesty/alexa-nodekit.git"
+  },
+  "keywords": [
+    "alexa",
+    "amazon",
+    "echo"
+  ],
+  "author": "Adam Schodde <sparky1010+github@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brutalhonesty/alexa-nodekit/issues"
+  },
+  "homepage": "https://github.com/brutalhonesty/alexa-nodekit",
+  "dependencies": {},
+  "devDependencies": {
+    "should": "^6.0.1"
+  }
+}
