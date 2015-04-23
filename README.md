@@ -87,7 +87,7 @@ $ npm test
 Contributions
 -----------------
 
-* Fork it (https://github.com/<username>/alexa-nodekit/fork ).
+* Fork it (https://github.com/YOUR_USERNAME/alexa-nodekit/fork).
 * Create your feature branch (git checkout -b my-new-feature).
 * Commit your changes (git commit -am 'Added some feature.').
 * Push to the branch (git push origin my-new-feature).
