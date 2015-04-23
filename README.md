@@ -7,6 +7,54 @@ Amazon Echo Alexa's App Kit NodeJS Implementation
 
 Usage
 --------
+```javascript
+// Require module.
+var alexa = require('alexa-nodekit');
+
+/**
+ * Store values from Echo Request.
+ *
+ * @param {Object} req The request object coming from the Echo.
+ * @return {undefined} No Response.
+ */
+alexa.launchRequest(req);
+alexa.intentRequest(req);
+alexa.sessionEndedRequest(req);
+
+/**
+ * Respond to the Echo requests. The Content-Length header must be included in each response.
+ *
+ * @param {String} speech The string that Alexa should state to the user. Up to 8000 characters and no more than 24 kb.
+ * @param {Object} card The card object to generate for echo.amazon.com.
+ * @param {String} card.title The card title.
+ * @param {String} card.subtitle The card subtitle.
+ * @param {String} card.content The card content.
+ * @param {Boolean} endSession Wether this response should end the session or not.
+ */
+// Launch or Intent Response.
+alexa.response('Welcome to my app, you can say things like <action> or <action>.', {
+  title: 'Launch Card Title',
+  subtitle: 'Launch Card Subtitle',
+  content: 'Launch Card Content'
+}, false, function (error, response) {
+  if(error) {
+    return console.log(error);
+  }
+  console.log(response);
+});
+
+// Session Ended Response.
+alexa.response(function (error, response) {
+  if(error) {
+    return console.log(error);
+  }
+  console.log(response);
+});
+```
+
+
+Examples
+-------------
 
 Example of Launch Request/Response using [ExpressJS](http://expressjs.com/).
 ```javascript
