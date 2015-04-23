@@ -15,6 +15,7 @@ var alexa = require('alexa-nodekit');
  * Store values from Echo Request.
  *
  * @param {Object} req The request object coming from the Echo.
+ *
  * @return {undefined} No Response.
  */
 alexa.launchRequest(req);
@@ -30,6 +31,9 @@ alexa.sessionEndedRequest(req);
  * @param {String} card.subtitle The card subtitle.
  * @param {String} card.content The card content.
  * @param {Boolean} endSession Wether this response should end the session or not.
+ * @param {Function} callback The callback function.
+ *
+ * @return {Function} The callback function.
  */
 // Launch or Intent Response.
 alexa.response('Welcome to my app, you can say things like <action> or <action>.', {
