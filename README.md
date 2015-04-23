@@ -3,6 +3,8 @@ alexa-nodekit
 
 Amazon Echo Alexa's App Kit NodeJS Implementation
 
+[![Build Status](https://travis-ci.org/brutalhonesty/alexa-nodekit.svg)](https://travis-ci.org/brutalhonesty/alexa-nodekit)
+
 Usage
 --------
 
