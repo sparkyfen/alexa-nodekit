@@ -1,6 +1,6 @@
 {
   "name": "alexa-nodekit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Amazon Echo Alexa's App Kit NodeJS Implementation",
   "main": "index.js",
   "scripts": {

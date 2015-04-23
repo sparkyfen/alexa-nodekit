@@ -8,9 +8,6 @@ exports.launchRequest = function (req) {
 };
 
 exports.intentRequest = function (req) {
-  if(req.version !== this.version) {
-    throw new Error('Version mismatch between requests.');
-  }
   this.sessionId = req.session.sessionId;
   this.attributes = req.session.attributes;
   this.userId = req.session.user.userId || '';
@@ -20,9 +17,6 @@ exports.intentRequest = function (req) {
 };
 
 exports.sessionEndedRequest = function (req) {
-  if(req.version !== this.version) {
-    throw new Error('Version mismatch between requests.');
-  }
   this.sessionId = req.session.new ? req.session.sessionId : this.sessionId;
   this.attributes = req.session.attributes;
   this.userId = req.session.user.userId || '';
