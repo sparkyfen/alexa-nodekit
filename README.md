@@ -14,13 +14,13 @@ var alexa = require('alexa-nodekit');
 /**
  * Store values from Echo Request.
  *
- * @param {Object} req The request object coming from the Echo.
+ * @param {Object} req.body The request body object coming from the Echo.
  *
  * @return {undefined} No Response.
  */
-alexa.launchRequest(req);
-alexa.intentRequest(req);
-alexa.sessionEndedRequest(req);
+alexa.launchRequest(req.body);
+alexa.intentRequest(req.body);
+alexa.sessionEndedRequest(req.body);
 
 /**
  * Respond to the Echo requests. The Content-Length header must be included in each response.
@@ -67,7 +67,7 @@ var alexa = require('alexa-nodekit');
 // Route request and response ends up here.
 exports.route = function (req, res) {
    // Grab the necessary values from the Echo request.
-   alexa.launchRequest(req);
+   alexa.launchRequest(req.body);
    // Store the session and/or user data
 
    // Respond to the Echo
@@ -91,7 +91,7 @@ var alexa = require('alexa-nodekit');
 // Same route used as launch, request and response ends up here.
 exports.route = function (req, res) {
    // Grab the necessary values from the Echo request.
-   alexa.intentRequest(req);
+   alexa.intentRequest(req.body);
    // Check session and/or user data
    // Check the Intent Name and Intent Slots to decide on what logic to kick off.
 
@@ -116,7 +116,7 @@ var alexa = require('alexa-nodekit');
 // Same route used as launch and intent, request and response ends up here.
 exports.route = function (req, res) {
    // Grab the necessary values from the Echo request.
-   alexa.sessionEndedRequest(req);
+   alexa.sessionEndedRequest(req.body);
    // Check session and delete it.
 
    // Respond to the Echo
