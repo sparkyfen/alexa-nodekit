@@ -23,6 +23,7 @@
   "homepage": "https://github.com/brutalhonesty/alexa-nodekit",
   "dependencies": {},
   "devDependencies": {
-    "should": "^6.0.1"
+    "should": "^6.0.1",
+    "mocha": "2.3.3"
   }
 }
